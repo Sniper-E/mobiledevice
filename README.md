@@ -6,7 +6,7 @@ Adds [ Post made via Mobile Device ] when posting from a mobile device. Welcome 
 ## Developers
 <strong>© (Sniper_E » [sniper-e.com](http://sniper-e.com)) & (dmzx » [dmzx-web.net](http://www.dmzx-web.net)) & (Martin » [martins-phpbb.com](http://www.martins-phpbb.com/forum))
 
-Download latest update: [Github/dmzx/Mobile-Device](https://github.com/Sniper-E/mobiledevice/archive/master.zip)</strong>
+Download latest dev update: [Github/Sniper-E/Mobile-Device](https://github.com/Sniper-E/mobiledevice/archive/master.zip)</strong>
 
 ## Install ---
 1. In the `root/ext/` directory of your phpBB board, create a new directory named `sniper`
