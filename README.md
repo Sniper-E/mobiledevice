@@ -1,7 +1,7 @@
 # Mobile Device
 
 ## Discription
-Adds [ Post made via Mobile Device ] when posting from a mobile device. Welcome mobile user message on index page showing user's mobile device. Displays logged in user's mobile image in header navbar on all other pages. Displays user is on their mobile in topic mini-profile and profile page. Popup mobile logs to view any user on a mobile device who has visited your site. Selections in UCP / Board preferences / Edit display for user options. Selections in ACP / Extensions / Mobile device / Settings for enabling features. Permissions / Misc for selecting who can view logs and who can clear logs.
+Adds `[ Post made via Mobile Device ]` when posting from a mobile device. Welcome mobile user message on index page showing user's mobile device. Displays logged in user's mobile image in header navbar on all other pages. Displays user is on their mobile in topic mini-profile and profile page. Popup mobile logs to view any user on a mobile device who has visited your site. Selections in `UCP / Board preferences / Edit display` for user options. Selections in `ACP / Extensions / Mobile device / Settings` for enabling features. `Permissions / Misc` for selecting who can view logs and who can clear logs.
 
 ## Developers
 <strong>© (Sniper_E » [sniper-e.com](http://sniper-e.com)) & (dmzx » [dmzx-web.net](http://www.dmzx-web.net)) & (martin » [martins-phpbb.com](http://www.martins-phpbb.com/forum))
