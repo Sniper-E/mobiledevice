@@ -1,0 +1,7 @@
+{% if MOBILE_ENABLE && MOBILE_HEADER_ENABLE %}
+	{% if	S_MOBILE_HEADER and S_MOBILE_NAME and (SCRIPT_NAME != "index" or not S_MOBILE_WELCOME) %}
+	<li class="small-icon rightside">
+		<img class="header-mobile-img" src="{{ BOARD_URL }}/ext/sniper/mobiledevice/images/{{ S_MOBILE_NAME }}.png" alt="" title="{{ lang('MOBILE_DEVICE_LOGIN') }} {{ S_MOBILE_NAME }}" />
+	</li>
+	{% endif %}
+{% endif %}

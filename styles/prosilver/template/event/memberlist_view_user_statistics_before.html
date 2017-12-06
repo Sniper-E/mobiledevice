@@ -1,0 +1,6 @@
+{% if MOBILE_PROFILE_ENABLE and (S_MOBILE_SELF or USERNAME != S_USERNAME) %}
+	{% if S_ONLINE and S_IS_MOBILE_PROFILE %}
+		<dt>{{ lang('MOBILE_DEVICE_LOGIN') }}{{ lang('COLON') }}</dt>
+		<dd>{{ S_DEVICE_NAME_PROFILE }}</dd>
+	{% endif %}
+{% endif %}

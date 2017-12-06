@@ -1,0 +1,5 @@
+{% if MOBILE_ENABLE && MOBILE_PROFILE_ENABLE && (S_MOBILE_SELF || postrow.POST_AUTHOR != S_USERNAME) %}
+	{% if postrow.DEVICE_TITLE and postrow.S_ONLINE and not postrow.S_POST_HIDDEN %}
+		<img class="postrow-mobile-img" src="{{ BOARD_URL }}/ext/sniper/mobiledevice/images/{{ postrow.DEVICE_TITLE }}.png" alt="" title="{{ postrow.DEVICE_TITLE }}" />
+	{% endif %}
+{% endif %}

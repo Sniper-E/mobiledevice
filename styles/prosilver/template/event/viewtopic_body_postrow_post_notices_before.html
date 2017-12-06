@@ -1,0 +1,3 @@
+{% if MOBILE_ENABLE && postrow.POST_DEVICE_TITLE %}
+<br /><span class="post-made-via">[ {{ lang('POST_MADE_VIA') }} {{ postrow.POST_DEVICE_TITLE }} ]</span><img src="./ext/sniper/mobiledevice/images/{{ postrow.POST_DEVICE_TITLE }}.png" alt="" title="{{ postrow.POST_DEVICE_TITLE }}" />
+{% endif %}

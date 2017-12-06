@@ -1,0 +1,8 @@
+{% if MOBILE_ENABLE && MOBILE_LOGS_ENABLE && U_MOBILE_VIEW_LOGS %}
+<li {% if not PHPBB_IS_32 %}class="small-icon icon-ucp"{% endif %} data-last-responsive="true">
+	<a href="{{ U_MOBILE_LOGS }}" onclick="popup('{{ U_MOBILE_LOGS }}', 1300, 700); return false;" value="{{ lang('MOBILE_LOGS') }}; return false;" role="menuitem">
+		{% if PHPBB_IS_32 %}<i class="icon fa fa-mobile" aria-hidden="true"></i>{% endif %}
+		<span>{{ lang('MOBILE_LOGS') }}</span>
+	</a>
+</li>
+{% endif %}

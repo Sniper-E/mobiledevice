@@ -1,0 +1,36 @@
+{% if MOBILE_ENABLE && S_IS_MOBILE %}
+	{% if MOBILE_WELCOME_ENABLE %}
+		<hr>
+		<dl>
+			<dt>
+				<label for="mobilewelcome1">{{ lang('MOBILE_DEVICE_USER') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<label for="mobilewelcome1"><input type="radio" name="mobilewelcome" id="mobilewelcome1" value="1"{% if S_UCP_MOBILEWELCOME %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label for="mobilewelcome0"><input type="radio" name="mobilewelcome" id="mobilewelcome0" value="0"{% if not S_UCP_MOBILEWELCOME %} checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+		{% endif %}
+		{% if MOBILE_HEADER_ENABLE %}
+		<dl>
+			<dt>
+				<label for="mobileheader1">{{ lang('MOBILE_DEVICE_HEADER') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<label for="mobileheader1"><input type="radio" name="mobileheader" id="mobileheader1" value="1"{% if S_UCP_MOBILEHEADER %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label for="mobileheader0"><input type="radio" name="mobileheader" id="mobileheader0" value="0"{% if not S_UCP_MOBILEHEADER %} checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+		{% endif %}
+		{% if MOBILE_PROFILE_ENABLE %}
+		<dl>
+			<dt>
+				<label for="mobileself1">{{ lang('MOBILE_DEVICE_SELF') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<label for="mobileself1"><input type="radio" name="mobileself" id="mobileself1" value="1"{% if S_UCP_MOBILESELF %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label for="mobileself0"><input type="radio" name="mobileself" id="mobileself0" value="0"{% if not S_UCP_MOBILESELF %} checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+	{% endif %}
+{% endif %}

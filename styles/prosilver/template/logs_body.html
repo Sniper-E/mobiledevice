@@ -1,0 +1,67 @@
+{% if MOBILE_ENABLE && MOBILE_LOGS_ENABLE && U_MOBILE_VIEW_LOGS %}
+{% INCLUDE 'simple_header.html' %}
+
+		<h2 class="mobile-title">{{ lang('MOBILE_DEVICE_LOGS') }}</h2>
+		<a href="javascript:window.location.href=window.location.href"><span id="countdown"></span></a>
+
+		<input type="button" class="button mobile-close" onclick="window.close(); return false;" value="{{ lang('CLOSE_WINDOW') }}" />
+
+		{% if loops.pagination|length or COUNT %}
+		<div class="action-bar top">
+			<div class="pagination mobile-pagination">
+				{{ lang('MOBILE_TOTAL') }} {{ COUNT }}
+				{% if loops.pagination|length %}
+					{% INCLUDE 'pagination.html' %}
+				{% endif %}
+			</div>
+		</div>
+		{% endif %}
+
+		<div class="forabg">
+			<div class="inner">
+				<ul class="topiclist">
+					<li class="header">
+						<dl class="row-item">
+							<dt><div class="list-inner">{{ lang('MOBILE_USERS') }}</div></dt>
+							<dd class="noshow"></dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="topiclist forums">
+				{% for logs in loops.logs %}
+					<li class="row {% if logs.S_ROW_COUNT is even %}bg1{% else %}bg2{% endif %}">
+						<dl>
+							<dt>
+								<div class="list-inner mobile-inner">
+									<span class="forum-image">{{ logs.DEVICE_IMAGE }}</span>
+									{% if U_MOBILE_CLEAR_LOGS and logs.S_FIRST_ROW %}<a class="mobile-remove" onclick="window.location.href='{{ U_REMOVE_LOG }}'" title="{{ lang('DELETE') }} {{ lang('MOBILE_LOG') }} {{ logs.LOG_ID }}"><i class="icon fa-trash-o fa-fw" aria-hidden="true"></i></a>{% endif %} 
+									{{ logs.USER_AGENT }}<br /><span class="mobile-names"{% if U_ACP %} title="{{ lang('IP') }}{{ lang('COLON') }} {{ logs.LOG_IP }}"{% endif %}>{{ lang('MOBILE_CONNECTED') }} <span class="log-device">{{ logs.DEVICE_NAME }}</span> {{ lang('POST_BY_AUTHOR') }} <span class="log-author">{{ logs.USER_NAME }}</span> &raquo; <span class="log-time">{{ logs.LOG_TIME }}</span></span>
+								</div>
+							</dt>
+							<dd class="noshow"></dd>
+						</dl>
+					</li>
+				{% else %}
+					<li class="row bg1">
+						<dl>
+							<dt>
+								<div class="list-inner mobile-inner">
+									{{ lang('MOBILE_NO_LOGS') }}
+								</div>
+							</dt>
+						</dl>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		{% if U_MOBILE_CLEAR_LOGS %}
+		<fieldset>
+			<input type="button" class="button mobile-clear" onclick="window.location.href = '{{ U_CLEAR_LOGS }}';" value="{{ lang('MOBILE_CLEAR_LOGS') }}" />
+		</fieldset>
+		{% endif %}
+
+{% EVENT mobile_simple_footer_before %}
+{% INCLUDE 'simple_footer.html' %}
+{% endif %}

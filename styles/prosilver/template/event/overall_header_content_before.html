@@ -1,0 +1,15 @@
+{% if (MOBILE_WELCOME_ENABLE && S_USER_LOGGED_IN) || (MOBILE_WELCOME_GUEST_ENABLE && not S_USER_LOGGED_IN) %}
+	{% if MOBILE_ENABLE && S_MOBILE_WELCOME && S_MOBILE_NAME && SCRIPT_NAME == "index" %}
+	<div class="welcome-mobile">
+		<div class="inner">
+			<span class="welcome-mobile-user">
+			<span class="welcome-user">{{ lang('MOBILE_POST') }} {{ S_USERNAME }} - </span>
+			<span class="mobile-aft1">{{ lang('MOBILE_POST_AFT1') }}</span>
+			<span class="mobile-aft2">{{ lang('MOBILE_POST_AFT2') }}</span>
+			<span class="mobile-img"> <img class="mobile-img" src="{{ BOARD_URL }}/ext/sniper/mobiledevice/images/{{ S_MOBILE_NAME }}.png" alt="" /></span>
+			{{ S_MOBILE_NAME }}
+			</span>
+		</div>
+	</div>
+	{% endif %}
+{% endif %}

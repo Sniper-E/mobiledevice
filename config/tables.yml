@@ -1,0 +1,2 @@
+parameters:
+    sniper.mobiledevice.table.mobilelogs: %core.table_prefix%mobile_logs
