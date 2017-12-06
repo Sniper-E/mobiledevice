@@ -4,6 +4,7 @@ services:
     sniper.mobiledevice.listener:
         class: sniper\mobiledevice\event\listener
         arguments:
+            - '@sniper.mobiledevice.core.functions'
             - '@request'
             - '@user'
             - '@template'
@@ -15,9 +16,26 @@ services:
             - '@?files.factory'
         tags:
             - { name: event.listener }
+    sniper.mobiledevice.admin.controller:
+        class: sniper\mobiledevice\controller\admin_controller
+        arguments:
+            - '@config'
+            - '@template'
+            - '@log'
+            - '@user'
+            - '@request'
+    sniper.mobiledevice.core.functions:
+        class: sniper\mobiledevice\core\functions
+        arguments:
+            - '@request'
+            - '@user'
+            - '@config'
+            - '@template'
+            - '@ext.manager'
     sniper.mobiledevice.controller:
         class: sniper\mobiledevice\controller\mobilelogs
         arguments:
+            - '@sniper.mobiledevice.core.functions'
             - '@template'
             - '@user'
             - '@auth'

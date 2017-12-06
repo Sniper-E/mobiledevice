@@ -3,6 +3,7 @@
 * @package phpBB Extension - Mobile Device
 * @copyright (c) 2015 Sniper_E - http://www.sniper-e.com
 * @copyright (c) 2015 dmzx - http://www.dmzx-web.net
+* @copyright (c) 2015 martin - http://www.martins-phpbb.com
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 */
 

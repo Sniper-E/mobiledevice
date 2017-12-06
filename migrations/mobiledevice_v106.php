@@ -9,24 +9,22 @@
 
 namespace sniper\mobiledevice\migrations;
 
-class mobiledevice_module extends \phpbb\db\migration\migration
+class mobiledevice_v106 extends \phpbb\db\migration\migration
 {
+	static public function depends_on()
+	{
+		return array(
+			'\sniper\mobiledevice\migrations\mobiledevice_data',
+		);
+	}
+
 	public function update_data()
 	{
 		return array(
-			array('module.add', array(
-				'acp',
-				'ACP_CAT_DOT_MODS',
-				'ACP_MOBILEDEVICE'
-			)),
-			array('module.add', array(
-				'acp',
-				'ACP_MOBILEDEVICE',
-				array(
-					'module_basename'	=> '\sniper\mobiledevice\acp\mobiledevice_module',
-					'modes'				=> array('config'),
-				),
-			)),
+			// Update config
+			array('config.update', array('mobiledevice_version', '1.0.6')),
+			// Add config
+			array('config.add', array('mobile_test_enable', '0')),
 		);
 	}
 }

@@ -1,65 +1,76 @@
 {% INCLUDE 'overall_header.html' %}
 
-	<h1>{{ lang('ACP_MOBILEDEVICE_TITLE') }}</h1>
+<h1>{{ lang('ACP_MOBILEDEVICE_TITLE') }}</h1>
 
-	<p class="successbox notice"><strong>{{ lang('ACP_MOBILEDEVICE_VERSION') }}{{ lang('COLON') }}	{{ ACP_MOBILEDEVICE_VERSION }}</strong><br/>
+<p class="successbox notice"><strong>{{ lang('ACP_MOBILEDEVICE_VERSION') }}{{ lang('COLON') }}	{{ ACP_MOBILEDEVICE_VERSION }}</strong><br/>
 	{{ lang('ACP_MOBILEDEVICE_DESC') }}</p>
 
-	<fieldset>
+<fieldset>
 	<legend>{{ lang('ACP_MOBILEDEVICE_EXT_DESC_TITLE') }}</legend>
 	<dl>
 		<dt class="permissions-panel">{{ lang('ACP_MOBILEDEVICE_EXT_DESC') }}</dt>
 		<dd style=:display: none"></dd>
 	</dl>
-	</fieldset>
+</fieldset>
 
-	<form id="acp_mobiledevice_config" method="post" action="{{ U_ACTION }}">
+<form id="acp_mobiledevice_config" method="post" action="{{ U_ACTION }}">
 	<fieldset>
-	<legend>{{ lang('ACP_MOBILEDEVICE_CONFIG') }}</legend>
-	<dl>
-		<dt><label for="mobile_enable">{{ lang('ACP_MOBILE_ENABLE') }}{{ lang('COLON') }}</label><br />
-		<span>{{ lang('ACP_MOBILE_ENABLE_EXPLAIN') }}</span></dt>
-		<dd><label><input type="radio" class="radio" name="mobile_enable" value="1"{% if ACP_MOBILE_ENABLE %} id="mobile_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
-		<label><input type="radio" class="radio" name="mobile_enable" value="0"{% if not ACP_MOBILE_ENABLE %} id="mobile_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
-	</dl>
-	</fieldset>
-
-	<fieldset>
-	<legend>{{ lang('ACP_MOBILEDEVICE_CONFIG_SET') }}</legend>
-	<dl>
-		<dt><label for="mobile_welcome_enable">{{ lang('ACP_MOBILE_WELCOME_ENABLE') }}{{ lang('COLON') }}</label><br />
-		<span>{{ lang('ACP_MOBILE_WELCOME_ENABLE_EXPLAIN') }}</span></dt>
-		<dd><label><input type="radio" class="radio" name="mobile_welcome_enable" value="1"{% if ACP_MOBILE_WELCOME_ENABLE %} id="mobile_welcome_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
-		<label><input type="radio" class="radio" name="mobile_welcome_enable" value="0"{% if not ACP_MOBILE_WELCOME_ENABLE %} id="mobile_welcome_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
-	</dl>
-	<dl>
-		<dt><label for="mobile_welcome_guest_enable">{{ lang('ACP_MOBILE_WELCOME_GUEST_ENABLE') }}{{ lang('COLON') }}</label><br />
-		<span>{{ lang('ACP_MOBILE_WELCOME_GUEST_ENABLE_EXPLAIN') }}</span></dt>
-		<dd><label><input type="radio" class="radio" name="mobile_welcome_guest_enable" value="1"{% if ACP_MOBILE_WELCOME_GUEST_ENABLE %} id="mobile_welcome_guest_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
-		<label><input type="radio" class="radio" name="mobile_welcome_guest_enable" value="0"{% if not ACP_MOBILE_WELCOME_GUEST_ENABLE %} id="mobile_welcome_guest_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
-	</dl>
-	<dl>
-		<dt><label for="mobile_header_enable">{{ lang('ACP_MOBILE_HEADER_ENABLE') }}{{ lang('COLON') }}</label><br />
-		<span>{{ lang('ACP_MOBILE_HEADER_ENABLE_EXPLAIN') }}</span></dt>
-		<dd><label><input type="radio" class="radio" name="mobile_header_enable" value="1"{% if ACP_MOBILE_HEADER_ENABLE %} id="mobile_header_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
-		<label><input type="radio" class="radio" name="mobile_header_enable" value="0"{% if not ACP_MOBILE_HEADER_ENABLE %} id="mobile_header_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
-	</dl>
-	<dl>
-		<dt><label for="mobile_profile_enable">{{ lang('ACP_MOBILE_PROFILE_ENABLE') }}{{ lang('COLON') }}</label><br />
-		<span>{{ lang('ACP_MOBILE_PROFILE_ENABLE_EXPLAIN') }}</span></dt>
-		<dd><label><input type="radio" class="radio" name="mobile_profile_enable" value="1"{% if ACP_MOBILE_PROFILE_ENABLE %} id="mobile_profile_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
-		<label><input type="radio" class="radio" name="mobile_profile_enable" value="0"{% if not ACP_MOBILE_PROFILE_ENABLE %} id="mobile_profile_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
-	</dl>
+		<legend>{{ lang('ACP_MOBILEDEVICE_CONFIG') }}</legend>
+		<dl>
+			<dt><label for="mobile_enable">{{ lang('ACP_MOBILE_ENABLE') }}{{ lang('COLON') }}</label><br />
+			<span>{{ lang('ACP_MOBILE_ENABLE_EXPLAIN') }}</span></dt>
+			<dd><label><input type="radio" class="radio" name="mobile_enable" value="1"{% if ACP_MOBILE_ENABLE %} id="mobile_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="mobile_enable" value="0"{% if not ACP_MOBILE_ENABLE %} id="mobile_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="mobile_test_enable">{{ lang('ACP_MOBILE_TEST_ENABLE') }}{{ lang('COLON') }}</label><br />
+			<span>{{ lang('ACP_MOBILE_TEST_ENABLE_EXPLAIN') }}</span></dt>
+			<dd><label><input type="radio" class="radio" name="mobile_test_enable" value="1"{% if ACP_MOBILE_TEST_ENABLE %} id="mobile_test_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="mobile_test_enable" value="0"{% if not ACP_MOBILE_TEST_ENABLE %} id="mobile_test_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+		</dl>
 	</fieldset>
 
 	<fieldset>
-	<legend>{{ lang('ACP_MOBILE_LOGS_SETTINGS') }}</legend>
-	<dl>
-		<dt><label for="mobile_logs_enable">{{ lang('ACP_MOBILE_LOGS_ENABLE') }}{{ lang('COLON') }}</label><br />
-		<span>{{ lang('ACP_MOBILE_LOGS_ENABLE_EXPLAIN') }}</span></dt>
-		<dd><label><input type="radio" class="radio" name="mobile_logs_enable" value="1"{% if ACP_MOBILE_LOGS_ENABLE %} id="mobile_logs_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
-		<label><input type="radio" class="radio" name="mobile_logs_enable" value="0"{% if not ACP_MOBILE_LOGS_ENABLE %} id="mobile_logs_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
-	</dl>
+		<legend>{{ lang('ACP_MOBILEDEVICE_CONFIG_SET') }}</legend>
+		<dl>
+			<dt><label for="mobile_welcome_enable">{{ lang('ACP_MOBILE_WELCOME_ENABLE') }}{{ lang('COLON') }}</label><br />
+			<span>{{ lang('ACP_MOBILE_WELCOME_ENABLE_EXPLAIN') }}</span></dt>
+			<dd><label><input type="radio" class="radio" name="mobile_welcome_enable" value="1"{% if ACP_MOBILE_WELCOME_ENABLE %} id="mobile_welcome_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="mobile_welcome_enable" value="0"{% if not ACP_MOBILE_WELCOME_ENABLE %} id="mobile_welcome_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="mobile_welcome_guest_enable">{{ lang('ACP_MOBILE_WELCOME_GUEST_ENABLE') }}{{ lang('COLON') }}</label><br />
+			<span>{{ lang('ACP_MOBILE_WELCOME_GUEST_ENABLE_EXPLAIN') }}</span></dt>
+			<dd><label><input type="radio" class="radio" name="mobile_welcome_guest_enable" value="1"{% if ACP_MOBILE_WELCOME_GUEST_ENABLE %} id="mobile_welcome_guest_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="mobile_welcome_guest_enable" value="0"{% if not ACP_MOBILE_WELCOME_GUEST_ENABLE %} id="mobile_welcome_guest_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="mobile_header_enable">{{ lang('ACP_MOBILE_HEADER_ENABLE') }}{{ lang('COLON') }}</label><br />
+			<span>{{ lang('ACP_MOBILE_HEADER_ENABLE_EXPLAIN') }}</span></dt>
+			<dd><label><input type="radio" class="radio" name="mobile_header_enable" value="1"{% if ACP_MOBILE_HEADER_ENABLE %} id="mobile_header_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="mobile_header_enable" value="0"{% if not ACP_MOBILE_HEADER_ENABLE %} id="mobile_header_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="mobile_profile_enable">{{ lang('ACP_MOBILE_PROFILE_ENABLE') }}{{ lang('COLON') }}</label><br />
+			<span>{{ lang('ACP_MOBILE_PROFILE_ENABLE_EXPLAIN') }}</span></dt>
+			<dd><label><input type="radio" class="radio" name="mobile_profile_enable" value="1"{% if ACP_MOBILE_PROFILE_ENABLE %} id="mobile_profile_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="mobile_profile_enable" value="0"{% if not ACP_MOBILE_PROFILE_ENABLE %} id="mobile_profile_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{{ lang('ACP_MOBILE_LOGS_SETTINGS') }}</legend>
+		<dl>
+			<dt><label for="mobile_logs_enable">{{ lang('ACP_MOBILE_LOGS_ENABLE') }}{{ lang('COLON') }}</label><br />
+			<span>{{ lang('ACP_MOBILE_LOGS_ENABLE_EXPLAIN') }}</span></dt>
+			<dd><label><input type="radio" class="radio" name="mobile_logs_enable" value="1"{% if ACP_MOBILE_LOGS_ENABLE %} id="mobile_logs_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="mobile_logs_enable" value="0"{% if not ACP_MOBILE_LOGS_ENABLE %} id="mobile_logs_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="mobile_logs_refresh">{{ lang('ACP_MOBILE_LOGS_REFRESH') }}{{ lang('COLON') }}</label><br />
+			<span>{{ lang('ACP_MOBILE_LOGS_REFRESH_EXPLAIN') }}</span></dt>
+			<dd><input type="number" name="mobile_logs_refresh" id="mobile_logs_refresh" size="3" maxlength="3" min="10" max="60" value="{{ ACP_MOBILE_LOGS_REFRESH }}" /></dd>
+		</dl>
 	</fieldset>
 
 	<p class="submit-buttons">
@@ -69,6 +80,6 @@
 		<input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
 		{{ S_FORM_TOKEN }}
 	</p>
-	</form>
+</form>
 
 {% INCLUDE 'overall_footer.html' %}

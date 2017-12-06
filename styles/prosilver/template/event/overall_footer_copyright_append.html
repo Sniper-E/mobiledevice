@@ -1,3 +1,3 @@
-{% if MOBILE_ENABLE and S_USER_LOGGED_IN %}
-	<div><span title="{{ lang('MOBILEDEVICE_VERSION') }}{{ lang('COLON') }} {{ MOBILEDEVICE_VERSION }}">{{ lang('MOBILE_DEVICE') }} &copy;</span> {{ lang('POST_BY_AUTHOR') }} {{ lang('MOBILE_AUTHOR_HOMEPAGES') }}</div>
+{% if MOBILEDEVICE_FOOTER_VIEW %}
+	<div>{{ MOBILEDEVICE_DISPLAY_NAME }} <span title="{{ lang('MOBILEDEVICE_VERSION') }}{{ lang('COLON') }} {{ MOBILEDEVICE_VERSION }}">&copy;</span> {{ lang('POST_BY_AUTHOR') }} {{ MOBILEDEVICE_AUTHOR_HOMEPAGES }}</div>
 {% endif %}

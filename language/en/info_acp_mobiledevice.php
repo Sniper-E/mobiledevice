@@ -3,6 +3,7 @@
 * @package phpBB Extension - Mobile Device
 * @copyright (c) 2015 Sniper_E - http://www.sniper-e.com
 * @copyright (c) 2015 dmzx - http://www.dmzx-web.net
+* @copyright (c) 2015 martin - http://www.martins-phpbb.com
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 */
 
@@ -33,6 +34,9 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'ACP_MOBILEDEVICE'							=> 'Mobile Device',
-	'ACP_MOBILEDEVICE_CONFIG_SETTINGS'			=> 'Settings',
+	'ACP_MOBILEDEVICE'                    => 'Mobile Device',
+	'ACP_MOBILEDEVICE_CONFIG_SETTINGS'    => 'Settings',
+
+	//Log
+	'LOG_ACP_MOBILEDEVICE_SETTINGS_SAVED' => '<strong>Mobile device settings saved</strong>',
 ));

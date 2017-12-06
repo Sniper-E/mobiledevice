@@ -16,14 +16,13 @@ ul.topiclist.forums dt .mobile-inner {
 	
 .mobile-pagination {
 	background-color: #f9f9f9;
-	padding: 0 4px;
+	padding: 2px 4px;
 	margin-right: 6px;
 	border: 1px solid #b4bac0;
 	border-radius: 6px;
 }
 
 .mobile-names {
-	cursor: pointer;
 	background-color: #FFF;
 	padding: 1px 4px;
 	font-weight: bold;
@@ -67,10 +66,27 @@ a.mobile-remove {
 	cursor: pointer;
 }
 
-#countdown {
-	display: none;
+#mobilelogsload
+{
+   background: transparent url("./images/loading-page.gif") no-repeat center center;
+   height: 100px;
+   width: 100px;
+   position: fixed;
+   z-index: 1000;
+   left: 45%;
+   top:15%;
+}
+
+.mobile-update-text {
+	float: right;
+	margin-right: 6px;
+	font-size: 0.6em !important;
 }
 
 .noshow {
 	display: none !important;
+}
+
+a { 
+    color: #4692BF !important; 
 }

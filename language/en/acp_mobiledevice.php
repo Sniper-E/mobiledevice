@@ -3,6 +3,7 @@
 * @package phpBB Extension - Mobile Device
 * @copyright (c) 2015 Sniper_E - http://www.sniper-e.com
 * @copyright (c) 2015 dmzx - http://www.dmzx-web.net
+* @copyright (c) 2015 martin - http://www.martins-phpbb.com
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 */
 
@@ -38,13 +39,16 @@ $lang = array_merge($lang, array(
 	'ACP_MOBILEDEVICE_VERSION'                => 'Version',
 	'ACP_MOBILEDEVICE_DESC'                   => 'Manage which mobile device features will be displayed on your board.',
 	'ACP_MOBILEDEVICE_CONFIG_SAVED'           => 'Mobile device settings saved',
+	'ACP_MOBILEDEVICE_SETTINGS'               => 'Mobile device settings',
 // Mobile discription:
-	'ACP_MOBILEDEVICE_EXT_DESC_TITLE'         => 'Mobile device discription',
+	'ACP_MOBILEDEVICE_EXT_DESC_TITLE'         => 'Mobile device description',
 	'ACP_MOBILEDEVICE_EXT_DESC'               => '<div style="margin: 0 10px">Adds [ Post made via Mobile Device ] with posted message when user posts from a mobile device. Displays welcome mobile user message on index. Displays user&#39;s mobile image in header navbar on all other pages. Displays user is Logged in on mobile in viewtopic and profile pages. Header navbar link for mobile logs popup if logs are enabled. Mobile log user agents can be used to add new mobile devices to your detect list. ACP switches for selecting mobile device options. UCP switches for registered user&#39;s display preferences.</div>',
 // General option:
 	'ACP_MOBILEDEVICE_CONFIG'                 => 'General option',
 	'ACP_MOBILE_ENABLE'                       => 'Enable mobile device',
 	'ACP_MOBILE_ENABLE_EXPLAIN'               => 'Enable mobile device detection to run on your board.',
+	'ACP_MOBILE_TEST_ENABLE'                  => 'Enable test mobile device',
+	'ACP_MOBILE_TEST_ENABLE_EXPLAIN'          => 'Enable test mobile device for testing with desktop.',
 // Display options:
 	'ACP_MOBILEDEVICE_CONFIG_SET'             => 'Display options',
 	'ACP_MOBILE_WELCOME_ENABLE'               => 'Enable mobile welcome',
@@ -59,4 +63,6 @@ $lang = array_merge($lang, array(
 	'ACP_MOBILE_LOGS_SETTINGS'                => 'Mobile logs option',
 	'ACP_MOBILE_LOGS_ENABLE'                  => 'Enable mobile logs',
 	'ACP_MOBILE_LOGS_ENABLE_EXPLAIN'          => 'Browser user agents of visiting mobile users will be detected and logged.',
+	'ACP_MOBILE_LOGS_REFRESH'                 => 'Mobile logs refresh',
+	'ACP_MOBILE_LOGS_REFRESH_EXPLAIN'         => 'Set time interval from 10 to 60 seconds for mobile logs refresh rate.',
 ));
