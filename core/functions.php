@@ -29,11 +29,11 @@ class functions
 	/**
 	* Constructor
 	*
-	* @param \phpbb\request\request             	$request
-	* @param \phpbb\user                        	$user
-	* @param \phpbb\config\config                   $config
-	* @param \phpbb\template\template		 		$template
-	* @param \phpbb\extension\manager 				$extension_manager
+	* @param \phpbb\request\request   	$request
+	* @param \phpbb\user              	$user
+	* @param \phpbb\config\config     	$config
+	* @param \phpbb\template\template 	$template
+	* @param \phpbb\extension\manager 	$extension_manager
 	*
 	*/
 	public function __construct(
@@ -44,11 +44,11 @@ class functions
 		\phpbb\extension\manager $extension_manager
 	)
 	{
-		$this->request          	= $request;
-		$this->user             	= $user;
-		$this->config           	= $config;
-		$this->template 			= $template;
-		$this->extension_manager	= $extension_manager;
+		$this->request           = $request;
+		$this->user              = $user;
+		$this->config            = $config;
+		$this->template          = $template;
+		$this->extension_manager = $extension_manager;
 	}
 	
 	public function mobile_device_detect($iphone = true, $ipod = true, $ipad = true, $android = true, $opera = true, $blackberry = true, $palm = true, $windows = true, $lg = true)

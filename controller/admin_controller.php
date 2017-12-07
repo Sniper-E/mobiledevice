@@ -32,11 +32,11 @@ class admin_controller
 	/**
 	 * Constructor
 	 *
-	 * @param \phpbb\config\config				$config
-	 * @param \phpbb\template\template			$template
-	 * @param \\phpbb\log\log_interface			$log
-	 * @param \phpbb\user						$user
-	 * @param \phpbb\request\request			$request
+	 * @param \phpbb\config\config      	$config
+	 * @param \phpbb\template\template  	$template
+	 * @param \\phpbb\log\log_interface 	$log
+	 * @param \phpbb\user               	$user
+	 * @param \phpbb\request\request    	$request
 	 */
 	public function __construct(
 		\phpbb\config\config $config,
@@ -46,11 +46,11 @@ class admin_controller
 		\phpbb\request\request $request
 	)
 	{
-		$this->config 		= $config;
-		$this->template 	= $template;
-		$this->log 			= $log;
-		$this->user 		= $user;
-		$this->request 		= $request;
+		$this->config   = $config;
+		$this->template = $template;
+		$this->log      = $log;
+		$this->user     = $user;
+		$this->request  = $request;
 	}
 
 	/**
@@ -81,16 +81,16 @@ class admin_controller
 		}
 
 		$this->template->assign_vars(array(
-			'U_ACTION'							=> $this->u_action,
-			'ACP_MOBILE_ENABLE'					=> $this->config['mobile_enable'],
-			'ACP_MOBILE_TEST_ENABLE'			=> $this->config['mobile_test_enable'],
-			'ACP_MOBILE_LOGS_REFRESH'		 	=> $this->config['mobile_logs_refresh'],
-			'ACP_MOBILE_WELCOME_ENABLE'			=> $this->config['mobile_welcome_enable'],
-			'ACP_MOBILE_WELCOME_GUEST_ENABLE' 	=> $this->config['mobile_welcome_guest_enable'],
-			'ACP_MOBILE_HEADER_ENABLE'			=> $this->config['mobile_header_enable'],
-			'ACP_MOBILE_PROFILE_ENABLE'			=> $this->config['mobile_profile_enable'],
-			'ACP_MOBILE_LOGS_ENABLE'			=> $this->config['mobile_logs_enable'],
-			'ACP_MOBILEDEVICE_VERSION'			=> $this->config['mobiledevice_version'],
+			'U_ACTION'                        => $this->u_action,
+			'ACP_MOBILE_ENABLE'               => $this->config['mobile_enable'],
+			'ACP_MOBILE_TEST_ENABLE'          => $this->config['mobile_test_enable'],
+			'ACP_MOBILE_LOGS_REFRESH'         => $this->config['mobile_logs_refresh'],
+			'ACP_MOBILE_WELCOME_ENABLE'       => $this->config['mobile_welcome_enable'],
+			'ACP_MOBILE_WELCOME_GUEST_ENABLE' => $this->config['mobile_welcome_guest_enable'],
+			'ACP_MOBILE_HEADER_ENABLE'        => $this->config['mobile_header_enable'],
+			'ACP_MOBILE_PROFILE_ENABLE'       => $this->config['mobile_profile_enable'],
+			'ACP_MOBILE_LOGS_ENABLE'          => $this->config['mobile_logs_enable'],
+			'ACP_MOBILEDEVICE_VERSION'        => $this->config['mobiledevice_version'],
 		));
 	}
 
