@@ -1,5 +1,7 @@
 # Mobile Device
 
+## Version 1.0.6
+
 ## Discription
 Adds `[ Post made via Mobile Device ]` when posting from a mobile device. Welcome mobile user message on index page showing user's mobile device. Displays logged in user's mobile image in header navbar on all other pages. Displays user is on their mobile in topic mini-profile and profile page. `Mobile Logs` popup to view mobile device visitors. Selections in `UCP -> Board preferences -> Edit display` for user options. Selections in `ACP -> Extensions -> Mobile device -> Settings` for enabling features. `Permissions -> Misc` for selecting who can view logs and who can clear logs.
 
