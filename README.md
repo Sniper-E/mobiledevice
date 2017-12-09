@@ -9,17 +9,17 @@ Adds `[ Post made via Mobile Device ]` when posting from a mobile device. Welcom
 Download latest dev update: [Github/Sniper-E/Mobile-Device](https://github.com/Sniper-E/mobiledevice/archive/master.zip)</strong>
 
 ## Install...
-1. In the `root/ext/` directory of your phpBB board, create a new directory named `sniper`
-2. Copy the `mobiledevice/` folder into `root/ext/sniper/`
-3. Navigate to `ACP -> Customise -> Disabled Extensions ->  Mobile Device` and click `Enable`
+1. In the `root/ext/` directory of your phpBB board, create a new directory named `sniper/`
+2. Copy the `mobiledevice/` folder into server `root/ext/sniper/` directory.
+3. Navigate to `ACP -> Customise -> Disabled Extensions ->  Mobile Device` and click `'Enable'`
 
 ## Update...
-1. Navigate to `ACP -> Customise -> Enabled Extensions ->  Mobile Device` and click `Disable`
-2. Copy the `mobiledevice/` folder into `root/ext/sniper/` over write files
-3. Navigate to `ACP -> Customise -> Disabled Extensions ->  Mobile Device` and click `Enable`
+1. Navigate to `ACP -> Customise -> Enabled Extensions ->  Mobile Device` and click `'Disable'`
+2. Copy the updated `mobiledevice/` folder into server `root/ext/sniper/` directory, over write files.
+3. Navigate to `ACP -> Customise -> Disabled Extensions ->  Mobile Device` and click `'Enable'`
 
 ## Uninstall..
-1. Navigate to `ACP -> Customise -> Enabled Extensions / Mobile Device` and click `Disable`
+1. Navigate to `ACP -> Customise -> Enabled Extensions / Mobile Device` and click `'Disable'`
 2. To permanently uninstall, click `Delete Data` and then delete the folder `/ext/sniper/mobiledevice`
 
 ## License

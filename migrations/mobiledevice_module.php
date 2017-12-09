@@ -23,8 +23,8 @@ class mobiledevice_module extends \phpbb\db\migration\migration
 				'acp',
 				'ACP_MOBILEDEVICE',
 				array(
-					'module_basename'	=> '\sniper\mobiledevice\acp\mobiledevice_module',
-					'modes'				=> array('config'),
+					'module_basename' => '\sniper\mobiledevice\acp\mobiledevice_module',
+					'modes'           => array('config'),
 				),
 			)),
 		);

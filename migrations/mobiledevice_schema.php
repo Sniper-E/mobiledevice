@@ -16,11 +16,11 @@ class mobiledevice_schema extends \phpbb\db\migration\migration
 		return 	array(
 			'add_columns' => array(
 				$this->table_prefix . 'users' => array(
-					'mobile_browser'		=> array('UINT:1', 0),
-					'device_name'			=> array('VCHAR:30', null),
-					'user_mobile_welcome'	=> array('BOOL', 1),
-					'user_mobile_header'	=> array('BOOL', 1),
-					'user_mobile_self'		=> array('BOOL', 1),
+					'mobile_browser'      => array('UINT:1', 0),
+					'device_name'         => array('VCHAR:30', null),
+					'user_mobile_welcome' => array('BOOL', 1),
+					'user_mobile_header'  => array('BOOL', 1),
+					'user_mobile_self'    => array('BOOL', 1),
 				),
 				$this->table_prefix . 'posts' => array(
 					'post_device_title' => array('VCHAR:30', null),
@@ -29,14 +29,14 @@ class mobiledevice_schema extends \phpbb\db\migration\migration
 			'add_tables'	=> array(
 				$this->table_prefix . 'mobile_logs'	=> array(
 					'COLUMNS' => array(
-					'log_id'		=> array('UINT', null, 'auto_increment'),
-					'log_ip'		=> array('VCHAR:15', ''),
-					'log_time'		=> array('INT:11', 0),
-					'device_name'	=> array('VCHAR:30', ''),
-					'user_name'		=> array('VCHAR:30', ''),
-					'user_agent'	=> array('VCHAR:255', ''),
+					'log_id'      => array('UINT', null, 'auto_increment'),
+					'log_ip'      => array('VCHAR:15', ''),
+					'log_time'    => array('INT:11', 0),
+					'device_name' => array('VCHAR:30', ''),
+					'user_name'   => array('VCHAR:30', ''),
+					'user_agent'  => array('VCHAR:255', ''),
 					),
-					'PRIMARY_KEY'	=>	'log_id',
+					'PRIMARY_KEY' => 'log_id',
 				),
 			),
 		);
