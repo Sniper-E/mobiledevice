@@ -65,7 +65,7 @@ $lang = array_merge($lang, array(
 // UCP
 	'MOBILE_DEVICE_USER'   => 'Display mobile welcome on index',
 	'MOBILE_DEVICE_HEADER' => 'Display your mobile image in header',
-	'MOBILE_DEVICE_SELF'   => 'Display your &#8217;on-mobile stats&#8216; in your profiles',
+	'MOBILE_DEVICE_SELF'   => 'Display your &#8217;on-mobile&#8216; stats in your profiles',
 // Mobile device names
 	'A4TS'          => 'Archos 40b Titanium Surround',
 	'AE5HD'         => 'Aquaris E5 HD',

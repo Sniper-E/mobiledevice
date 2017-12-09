@@ -273,32 +273,29 @@ class listener implements EventSubscriberInterface
 			$user_name = $this->user->data['username'];
 			$device_name = $this->request->variable('device_name', $status[1]);
 			
-			if (!$this->user->data['is_bot'])
+			if ($mobilelogs_counter == 0 && $device_name != '')
 			{
-				if ($mobilelogs_counter == 0 && $device_name != '')
-				{
-					$sql_ary = array(
-						'user_agent'  => (string) $user_agent,
-						'log_ip'      => (string) $this->user->ip,
-						'user_name'   => (string) $user_name,
-						'device_name' => (string) $device_name,
-						'log_time'    => (string) time(),
-					);
-					$this->db->sql_query('INSERT INTO ' . $this->mobilelogs_table . ' ' . $this->db->sql_build_array('INSERT', $sql_ary));
-				}
-				elseif ($this->user->data['is_mobile'])
-				{
-					$sql_ary = array(
-						'user_agent'  => (string) $user_agent,
-						'user_name'   => (string) $user_name,
-						'device_name' => (string) $device_name,
-						'log_time'    => (string) time(),
-					);
+				$sql_ary = array(
+					'user_agent'  => (string) $user_agent,
+					'log_ip'      => (string) $this->user->ip,
+					'user_name'   => (string) $user_name,
+					'device_name' => (string) $device_name,
+					'log_time'    => (string) time(),
+				);
+				$this->db->sql_query('INSERT INTO ' . $this->mobilelogs_table . ' ' . $this->db->sql_build_array('INSERT', $sql_ary));
+			}
+			elseif ($this->user->data['is_mobile'])
+			{
+				$sql_ary = array(
+					'user_agent'  => (string) $user_agent,
+					'user_name'   => (string) $user_name,
+					'device_name' => (string) $device_name,
+					'log_time'    => (string) time(),
+				);
 					
-					$sql = 'UPDATE ' . $this->mobilelogs_table . ' SET ' . $this->db->sql_build_array('UPDATE', $sql_ary) . '
-						WHERE ' . $this->db->sql_in_set('log_ip', $this->user->ip);
-					$this->db->sql_query($sql);
-				}
+				$sql = 'UPDATE ' . $this->mobilelogs_table . ' SET ' . $this->db->sql_build_array('UPDATE', $sql_ary) . '
+					WHERE ' . $this->db->sql_in_set('log_ip', $this->user->ip);
+				$this->db->sql_query($sql);
 			}
 		}
 		

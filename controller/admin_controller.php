@@ -39,11 +39,11 @@ class admin_controller
 	 * @param \phpbb\request\request    	$request
 	 */
 	public function __construct(
-		\phpbb\config\config $config,
-		\phpbb\template\template $template,
-		\phpbb\log\log_interface $log,
-		\phpbb\user $user,
-		\phpbb\request\request $request
+		\phpbb\config\config     	$config,
+		\phpbb\template\template 	$template,
+		\phpbb\log\log_interface 	$log,
+		\phpbb\user              	$user,
+		\phpbb\request\request   	$request
 	)
 	{
 		$this->config   = $config;

@@ -62,6 +62,9 @@ class functions
 				$status = $this->user->lang['DESKTOP'];
 				$mobile_browser = true;
 			break;
+			case (preg_match('/Bot|CFNetwork|libwww|Java|Jigsaw|SpreadTrum|httpget/i',$user_agent)) || $this->user->data['is_bot'];
+				$mobile_browser = false;
+			break;
 			case (preg_match('/ipad/i',$user_agent));
 				$status = $this->user->lang['IPAD'];
 				$mobile_browser = $ipad;

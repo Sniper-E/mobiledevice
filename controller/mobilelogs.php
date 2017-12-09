@@ -55,15 +55,15 @@ class mobilelogs
 	* @param string                              	$mobilelogs_table
 	*/
 	public function __construct(
-		\sniper\mobiledevice\core\functions $functions,
-		\phpbb\template\template $template,
-		\phpbb\user $user,
-		\phpbb\auth\auth $auth,
-		\phpbb\db\driver\driver_interface $db,
-		\phpbb\request\request $request,
-		\phpbb\config\config $config,
-		\phpbb\controller\helper $helper,
-		\phpbb\pagination $pagination,
+		\sniper\mobiledevice\core\functions 	$functions,
+		\phpbb\template\template            	$template,
+		\phpbb\user                         	$user,
+		\phpbb\auth\auth                    	$auth,
+		\phpbb\db\driver\driver_interface   	$db,
+		\phpbb\request\request              	$request,
+		\phpbb\config\config                	$config,
+		\phpbb\controller\helper            	$helper,
+		\phpbb\pagination                   	$pagination,
 		$mobilelogs_table
 	)
 	{
