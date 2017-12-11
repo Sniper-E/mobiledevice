@@ -270,6 +270,7 @@ class listener implements EventSubscriberInterface
 			
 			$status = $this->functions->mobile_device_detect();
 			$user_agent = $this->request->server('HTTP_USER_AGENT');
+			$user_ip = $this->user->data['user_ip'];
 			$user_name = $this->user->data['username'];
 			$device_name = $this->request->variable('device_name', $status[1]);
 			
@@ -277,7 +278,7 @@ class listener implements EventSubscriberInterface
 			{
 				$sql_ary = array(
 					'user_agent'  => (string) $user_agent,
-					'log_ip'      => (string) $this->user->ip,
+					'log_ip'      => (string) $user_ip,
 					'user_name'   => (string) $user_name,
 					'device_name' => (string) $device_name,
 					'log_time'    => (string) time(),
