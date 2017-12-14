@@ -53,8 +53,8 @@ class functions
 	
 	public function mobile_device_detect($iphone = true, $ipod = true, $ipad = true, $android = true, $opera = true, $blackberry = true, $palm = true, $windows = true, $lg = true)
 	{
-		$mobile_browser	= false;
-		$user_agent	 = $this->request->server('HTTP_USER_AGENT');
+		$mobile_browser = false;
+		$user_agent     = $this->request->server('HTTP_USER_AGENT');
 		
 		switch (true)
 		{		
@@ -165,6 +165,10 @@ class functions
 				else if (preg_match('/EVA-L09/i',$user_agent))
 				{
 					$status = $this->user->lang['HPL09'];
+				}
+				else if (preg_match('/VNS-L23/i',$user_agent))
+				{
+					$status = $this->user->lang['HPL23'];
 				}
 				else if (preg_match('/IMM76B/i',$user_agent))
 				{
@@ -382,9 +386,9 @@ class functions
 		}
 
 		$this->template->assign_vars(array(
-			'MOBILEDEVICE_DISPLAY_NAME'		=> $meta['extra']['display-name'],
-			'MOBILEDEVICE_AUTHOR_NAMES'		=> implode(' &amp; ', $author_names),
-			'MOBILEDEVICE_AUTHOR_HOMEPAGES'	=> implode(' &amp; ', $author_homepages),
+			'MOBILEDEVICE_DISPLAY_NAME'     => $meta['extra']['display-name'],
+			'MOBILEDEVICE_AUTHOR_NAMES'     => implode(' &amp; ', $author_names),
+			'MOBILEDEVICE_AUTHOR_HOMEPAGES' => implode(' &amp; ', $author_homepages),
 		));
 
 		return;
