@@ -120,6 +120,7 @@ $lang = array_merge($lang, array(
 	'SGS6'          => 'Samsung Galaxy S6',
 	'SGS6E'         => 'Samsung Galaxy S6 Edge',
 	'SGS7E'         => 'Samsung Galaxy S7 Edge',
+	'SGS8'          => 'Samsung Galaxy S8',
 	'SGSD2'         => 'Samsung Galaxy S Duos 2',
 	'SGT3'          => 'Samsung Galaxy Tab 3',
 	'SGT3W'         => 'Samsung Galaxy Tab3',

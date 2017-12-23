@@ -150,6 +150,10 @@ class functions
 				{
 					$status = $this->user->lang['SGS7E'];
 				}
+				else if (preg_match('/SM-G950F/i',$user_agent))
+				{
+					$status = $this->user->lang['SGS8'];
+				}
 				else if (preg_match('/GT-S7582/i',$user_agent))
 				{
 					$status = $this->user->lang['SGSD2'];
