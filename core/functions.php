@@ -250,7 +250,7 @@ class functions
 				{
 					$status = $this->user->lang['N1'];
 				}
-				else if (preg_match('/Nexus 4|LRX22C|LVY48F/i',$user_agent))
+				else if (preg_match('/Nexus 4|LRX22C|LVY48F|LMY47V/i',$user_agent))
 				{
 					$status = $this->user->lang['N4'];
 				}
